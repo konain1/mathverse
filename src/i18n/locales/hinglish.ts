@@ -73,6 +73,19 @@ export const hinglish = {
     best: "Best: {n}/3 stars",
     startBuilding: 'Building shuru karo',
   },
+  basics: {
+    title: 'Basics',
+    sectionTitle: 'Pehle basics samjho',
+    sectionBody: 'Edge, face, vertex jaise words chhote animation ke saath.',
+    open: 'Basics padho',
+    lifeExample: 'Asli zindagi mein',
+    prev: 'Pichhla',
+    next: 'Agla',
+    replay: 'Phir se chalao',
+    backToTopic: 'Topic par wapas',
+    of: '{n} / {total}',
+    allDone: 'Basics ho gaye! Ab sawaal try karo.',
+  },
   build: {
     canvasLabel: "3D build area. Tools se points, lines aur faces banao.",
     tools: {

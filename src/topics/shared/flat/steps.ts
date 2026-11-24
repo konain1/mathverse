@@ -35,9 +35,9 @@ export const equalSides = (a: number) =>
     'sides',
     4,
     [
-      `Square ki chaaron sides barabar hain: AB = BC = CD = DA = ${a} cm. Barabar sides par ek jaisa nishaan (tick) lagate hain.`,
-      `All four sides of a square are equal: AB = BC = CD = DA = ${a} cm. Equal sides get the same tick mark.`,
-      `वर्ग की चारों भुजाएँ बराबर हैं: AB = BC = CD = DA = ${a} cm। बराबर भुजाओं पर एक जैसा निशान लगाते हैं।`,
+      `Square ki chaaron sides barabar hain: har side ${a} cm.`,
+      `All four sides of a square are equal: each is ${a} cm.`,
+      `वर्ग की चारों भुजाएँ बराबर हैं: हर भुजा ${a} cm।`,
     ],
     `AB = BC = CD = DA = ${a}${CM}`,
     [
@@ -59,9 +59,9 @@ export const oppositeSides = (l: number, b: number) =>
     ],
     `AB = CD = ${l}${CM},\\quad BC = DA = ${b}${CM}`,
     [
-      'Rectangle ki opposite sides parallel aur barabar hoti hain. Isliye ek jodi par ek tick, doosri par do.',
-      "A rectangle's opposite sides are parallel and equal. So one pair gets one tick, the other pair two.",
-      'आयत की सम्मुख भुजाएँ समांतर और बराबर होती हैं। इसलिए एक जोड़ी पर एक निशान, दूसरी पर दो।',
+      'Saamne wali sides barabar hoti hain. Ek jodi par 1 nishaan, doosri par 2.',
+      'Opposite sides are equal. One pair gets 1 tick, the other gets 2.',
+      'सामने वाली भुजाएँ बराबर होती हैं। एक जोड़ी पर 1 निशान, दूसरी पर 2।',
     ],
   );
 
@@ -77,17 +77,17 @@ export const rightAngles = () =>
     ],
     `\\angle A = \\angle B = \\angle C = \\angle D = 90^\\circ`,
     [
-      'Kisi bhi quadrilateral ke chaaron angles ka sum 360° hota hai. Yahan chaaron barabar hain, to har ek 90°.',
-      'The four angles of any quadrilateral add up to 360°. Here all four are equal, so each is 90°.',
-      'किसी भी चतुर्भुज के चारों कोणों का योग 360° होता है। यहाँ चारों बराबर हैं, तो हर एक 90°।',
+      'Chaar angles milkar 360° hote hain. Chaaron barabar, to har ek 90°.',
+      'Four angles always make 360°. All four are equal, so each is 90°.',
+      'चार कोण मिलकर 360° होते हैं। चारों बराबर, तो हर एक 90°।',
     ],
   );
 
 export function perimeterWalk(l: number, b: number): SolutionStep {
   const why: Tri = [
-    'Fence, lace ya border jitni lambi chahiye, wahi perimeter hai. Ye ek length hai, isliye unit cm hai (cm² nahi).',
-    'The length of fence, lace or border you need is the perimeter. It is a length, so the unit is cm (not cm²).',
-    'बाड़, लेस या किनारी जितनी लंबी चाहिए, वही परिमाप है। यह एक लंबाई है, इसलिए इकाई cm है (cm² नहीं)।',
+    'Perimeter = kinare ki poori lambai. Isliye unit cm hai, cm² nahi.',
+    'Perimeter = the length all the way round. So it is in cm, not cm².',
+    'परिमाप = किनारे की पूरी लंबाई। इसलिए इकाई cm है, cm² नहीं।',
   ];
   if (l === b) {
     const P = squarePerimeter(l);
@@ -131,9 +131,9 @@ export const tileRow = (l: number) =>
     ],
     `\\text{row} = ${l}`,
     [
-      'Har unit square ka area 1 cm² hai. Jitne squares se figure poori dhak jaaye, utna hi area.',
-      'Each unit square has an area of 1 cm². However many squares cover the figure exactly, that is the area.',
-      'हर इकाई वर्ग का क्षेत्रफल 1 cm² है। जितने वर्गों से आकृति पूरी ढक जाए, उतना ही क्षेत्रफल।',
+      'Har unit square = 1 cm². Jitne squares lage, utna area.',
+      'Each unit square = 1 cm². However many squares it takes is the area.',
+      'हर इकाई वर्ग = 1 cm²। जितने वर्ग लगे, उतना क्षेत्रफल।',
     ],
   );
 
@@ -205,9 +205,9 @@ export const rightTriangle = (l: number, b: number) =>
     'right-triangle',
     4,
     [
-      `Diagonal ne right triangle ABC banaya: B par 90°, legs AB = ${l} cm aur BC = ${b} cm. AC iska hypotenuse hai.`,
-      `The diagonal makes a right triangle ABC: 90° at B, legs AB = ${l} cm and BC = ${b} cm. AC is its hypotenuse.`,
-      `विकर्ण ने समकोण त्रिभुज ABC बनाया: B पर 90°, भुजाएँ AB = ${l} cm और BC = ${b} cm। AC इसका कर्ण है।`,
+      `Diagonal se right triangle bana: AB = ${l}, BC = ${b}, aur B par 90°.`,
+      `The diagonal makes a right triangle: AB = ${l}, BC = ${b}, and B is 90°.`,
+      `विकर्ण से समकोण त्रिभुज बना: AB = ${l}, BC = ${b}, और B पर 90°।`,
     ],
     `\\angle B = 90^\\circ`,
   );
@@ -223,15 +223,15 @@ export function pythagStep(l: number, b: number): SolutionStep {
     'pythag',
     6,
     [
-      `Pythagoras: dono legs par bane squares milakar hypotenuse wale square ke barabar: ${l}² + ${b}² = ${l * l} + ${b * b} = ${s}. To AC = √${s} = ${r.text}${r.exact ? '' : ` ≈ ${fmt(d)}`} cm.`,
-      `Pythagoras: the squares on the two legs together equal the square on the hypotenuse: ${l}² + ${b}² = ${l * l} + ${b * b} = ${s}. So AC = √${s} = ${r.text}${r.exact ? '' : ` ≈ ${fmt(d)}`} cm.`,
-      `पाइथागोरस: दोनों भुजाओं पर बने वर्ग मिलकर कर्ण वाले वर्ग के बराबर: ${l}² + ${b}² = ${l * l} + ${b * b} = ${s}। तो AC = √${s} = ${r.text}${r.exact ? '' : ` ≈ ${fmt(d)}`} cm।`,
+      `Pythagoras: ${l}² + ${b}² = ${s}. Isliye AC = √${s} = ${r.text}${r.exact ? '' : ` ≈ ${fmt(d)}`} cm.`,
+      `Pythagoras: ${l}² + ${b}² = ${s}. So AC = √${s} = ${r.text}${r.exact ? '' : ` ≈ ${fmt(d)}`} cm.`,
+      `पाइथागोरस: ${l}² + ${b}² = ${s}। इसलिए AC = √${s} = ${r.text}${r.exact ? '' : ` ≈ ${fmt(d)}`} cm।`,
     ],
     `\\begin{aligned} AC^2 &= ${l}^2 + ${b}^2 = ${l * l} + ${b * b} = ${s} \\\\ AC &= \\sqrt{${s}} = ${r.tex}${approx}${CM} \\end{aligned}`,
     [
-      'Right triangle mein sabse lambi side (90° ke saamne) ka square, baaki do sides ke squares ke jod ke barabar hota hai.',
-      'In a right triangle, the square of the longest side (opposite the 90°) equals the sum of the squares of the other two sides.',
-      'समकोण त्रिभुज में सबसे लंबी भुजा (90° के सामने) का वर्ग, बाकी दो भुजाओं के वर्गों के योग के बराबर होता है।',
+      'Do chhoti sides ke squares ka jod = sabse lambi side ka square.',
+      'The two short sides squared and added = the longest side squared.',
+      'दो छोटी भुजाओं के वर्गों का योग = सबसे लंबी भुजा का वर्ग।',
     ],
   );
 }
@@ -255,15 +255,15 @@ export const flipStep = (kindHl = 'rectangle') =>
     'flip',
     5.5,
     [
-      `Ek triangle ko utha ke ghumao: wo doosre par bilkul fit baith jaata hai. AB = CD, BC = DA aur AC dono mein common, isliye SSS se dono congruent.`,
-      `Lift one triangle and turn it: it fits exactly on the other. AB = CD, BC = DA and AC is shared, so by SSS they are congruent.`,
-      `एक त्रिभुज को उठाकर घुमाओ: वह दूसरे पर बिल्कुल फ़िट बैठ जाता है। AB = CD, BC = DA और AC दोनों में उभयनिष्ठ, इसलिए SSS से दोनों सर्वांगसम।`,
+      `Ek triangle ko utha ke ghumao. Wo doosre par poora fit ho jaata hai: dono congruent hain.`,
+      `Lift one triangle and turn it. It fits exactly on the other: they are congruent.`,
+      `एक त्रिभुज को उठाकर घुमाओ। वह दूसरे पर पूरा फ़िट हो जाता है: दोनों सर्वांगसम हैं।`,
     ],
     `\\triangle ABC \\cong \\triangle CDA\\ (\\text{SSS})`,
     [
-      `Congruent matlab bilkul ek jaise: ek ko doosre par rakho to poora dhak jaaye. Isliye har triangle ka area ${kindHl} ka aadha hai.`,
-      `Congruent means exactly alike: put one on the other and it covers it completely. So each triangle has half the ${kindHl}'s area.`,
-      'सर्वांगसम यानी बिल्कुल एक जैसे: एक को दूसरे पर रखो तो पूरा ढक जाए। इसलिए हर त्रिभुज का क्षेत्रफल आकृति का आधा है।',
+      `Teeno sides barabar hain (SSS). Isliye har triangle ${kindHl} ka theek aadha hai.`,
+      `All three sides match (SSS). So each triangle is exactly half the ${kindHl}.`,
+      'तीनों भुजाएँ बराबर हैं (SSS)। इसलिए हर त्रिभुज आकृति का ठीक आधा है।',
     ],
   );
 
@@ -274,14 +274,14 @@ export const bothDiagonals = (square: boolean) =>
     4.5,
     square
       ? [
-          'Dono diagonals AC aur BD barabar hain, aur O par ek doosre ko aadha-aadha kaatte hain, wo bhi 90° par.',
-          'The diagonals AC and BD are equal, and they cut each other in half at O, at 90°.',
-          'दोनों विकर्ण AC और BD बराबर हैं, और O पर एक-दूसरे को आधा-आधा काटते हैं, वह भी 90° पर।',
+          'Dono diagonals barabar hain. Wo beech (O) mein 90° par milte hain.',
+          'Both diagonals are equal. They meet in the middle (O) at 90°.',
+          'दोनों विकर्ण बराबर हैं। वे बीच (O) में 90° पर मिलते हैं।',
         ]
       : [
-          'Dono diagonals AC aur BD barabar hain, aur O par ek doosre ko aadha-aadha kaatte hain (par 90° par nahi).',
-          'The diagonals AC and BD are equal and cut each other in half at O (but not at 90°).',
-          'दोनों विकर्ण AC और BD बराबर हैं, और O पर एक-दूसरे को आधा-आधा काटते हैं (पर 90° पर नहीं)।',
+          'Dono diagonals barabar hain. Wo beech (O) mein ek doosre ko aadha karte hain.',
+          'Both diagonals are equal. They cut each other in half at O.',
+          'दोनों विकर्ण बराबर हैं। वे O पर एक-दूसरे को आधा करते हैं।',
         ],
     square ? `AC = BD,\\quad OA = OB = OC = OD,\\quad \\angle AOB = 90^\\circ` : `AC = BD,\\quad OA = OB = OC = OD`,
   );

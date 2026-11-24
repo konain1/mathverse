@@ -70,6 +70,19 @@ export const en: Messages = {
     best: "Best: {n}/3 stars",
     startBuilding: 'Start building',
   },
+  basics: {
+    title: 'Basics',
+    sectionTitle: 'Learn the basics first',
+    sectionBody: 'Words like edge, face and vertex, each with a short animation.',
+    open: 'Read the basics',
+    lifeExample: 'In real life',
+    prev: 'Previous',
+    next: 'Next',
+    replay: 'Play again',
+    backToTopic: 'Back to topic',
+    of: '{n} / {total}',
+    allDone: 'Basics done! Now try the questions.',
+  },
   build: {
     canvasLabel: "3D build area. Use the tools to place points, lines and faces.",
     tools: {

@@ -51,9 +51,9 @@ export function solution(id: string, p: Params): SolutionScript {
             'medians',
             5,
             [
-              'B aur C se bhi ek-ek median. Teeno ek hi point G par milti hain: centroid. Isi tarah teen altitudes bhi hoti hain.',
-              'One more median from B and one from C. All three meet at a single point G, the centroid. In the same way there are three altitudes.',
-              'B और C से भी एक-एक माध्यिका। तीनों एक ही बिंदु G पर मिलती हैं: केंद्रक। इसी तरह तीन शीर्षलंब भी होते हैं।',
+              'B aur C se bhi median. Teeno ek point G par milti hain. Altitudes bhi teen hoti hain.',
+              'One more from B and one from C. All three meet at one point, G. There are 3 altitudes too.',
+              'B और C से भी माध्यिका। तीनों एक बिंदु G पर मिलती हैं। शीर्षलंब भी तीन होते हैं।',
             ],
             `3\\ \\text{medians},\\ 3\\ \\text{altitudes}`,
             [
@@ -88,9 +88,9 @@ export function solution(id: string, p: Params): SolutionScript {
             ],
             undefined,
             [
-              'AB = AC, BM = MC aur AM common: SSS se ABM aur ACM congruent, isliye M par dono angles barabar, yaani 90°.',
-              'AB = AC, BM = MC and AM is shared: by SSS, ABM and ACM are congruent, so the angles at M are equal, i.e. 90°.',
-              'AB = AC, BM = MC और AM उभयनिष्ठ: SSS से ABM और ACM सर्वांगसम, इसलिए M पर दोनों कोण बराबर, यानी 90°।',
+              'Dono taraf ke triangles ek jaise hain, isliye M par dono angles 90° hain.',
+              'The two halves are identical triangles, so both angles at M are 90°.',
+              'दोनों तरफ़ के त्रिभुज एक जैसे हैं, इसलिए M पर दोनों कोण 90° हैं।',
             ],
           ),
           step(

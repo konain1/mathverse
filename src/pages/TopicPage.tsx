@@ -1,4 +1,5 @@
-import { ArrowLeft, Hammer } from 'lucide-react';
+import { ArrowLeft, BookOpen, Hammer } from 'lucide-react';
+import { BASICS_BY_FAMILY, CONCEPT_BY_ID } from '@/features/basics/concepts';
 import { Link, useParams } from 'react-router-dom';
 import { ShapeIcon } from '@/components/ShapeIcon';
 import { FAMILY_NAME } from '@/features/landing/FamilyPanel';
@@ -97,6 +98,33 @@ export default function TopicPage() {
             </ul>
           </section>
         )}
+
+        <section aria-labelledby="basics-title" className="glass rounded-card p-5">
+          <div className="flex gap-3">
+            <BookOpen className="mt-0.5 h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
+            <div>
+              <h2 id="basics-title" className="font-extrabold">
+                {t('basics.sectionTitle')}
+              </h2>
+              <p className="mt-1 text-sm text-muted">{t('basics.sectionBody')}</p>
+            </div>
+          </div>
+          <ul className="mt-3 flex flex-wrap gap-1.5">
+            {BASICS_BY_FAMILY[meta.family].map((id) => (
+              <li key={id}>
+                <Link
+                  to={`/basics/${meta.family}/${id}?from=${meta.id}`}
+                  className="inline-flex min-h-[36px] items-center rounded-full border border-line/80 px-3 text-xs font-bold hover:border-accent"
+                >
+                  {loc(CONCEPT_BY_ID.get(id)!.title)}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <Link to={`/basics/${meta.family}?from=${meta.id}`} className="btn-primary mt-4 text-sm">
+            {t('basics.open')}
+          </Link>
+        </section>
 
         {playable && <QuestionList topicId={meta.id} />}
 

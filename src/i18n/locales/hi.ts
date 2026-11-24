@@ -70,6 +70,19 @@ export const hi: Messages = {
     best: "सबसे अच्छा: {n}/3 सितारे",
     startBuilding: 'बनाना शुरू करो',
   },
+  basics: {
+    title: 'मूल बातें',
+    sectionTitle: 'पहले मूल बातें समझो',
+    sectionBody: 'किनारा, फलक, शीर्ष जैसे शब्द छोटे एनिमेशन के साथ।',
+    open: 'मूल बातें पढ़ो',
+    lifeExample: 'असल ज़िंदगी में',
+    prev: 'पिछला',
+    next: 'अगला',
+    replay: 'फिर से चलाओ',
+    backToTopic: 'टॉपिक पर वापस',
+    of: '{n} / {total}',
+    allDone: 'मूल बातें हो गईं! अब सवाल हल करो।',
+  },
   build: {
     canvasLabel: "3D निर्माण क्षेत्र। टूल से बिंदु, रेखाएँ और फलक बनाओ।",
     tools: {

@@ -16,9 +16,9 @@ function shared(a: number) {
     ),
     formula: `\\text{faces} = 6,\\quad a = ${a}\\,\\text{cm}`,
     why: tx(
-      'Cube ki saari 12 edges barabar hoti hain, isliye har face ki dono sides barabar hain: har face square hai.',
-      'All 12 edges of a cube are equal, so both sides of every face are equal: every face is a square.',
-      'घन के सभी 12 किनारे बराबर होते हैं, इसलिए हर फलक की दोनों भुजाएँ बराबर हैं: हर फलक वर्ग है।',
+      'Cube ki saari edges barabar hain, isliye har face square hai.',
+      'All edges of a cube are equal, so every face is a square.',
+      'घन के सभी किनारे बराबर हैं, इसलिए हर फलक वर्ग है।',
     ),
   };
   const oneFace: SolutionStep = {
@@ -26,9 +26,9 @@ function shared(a: number) {
     cue: 'one-face',
     duration: 4.5,
     narration: tx(
-      `Pehle ek face ka area: ${a} cm × ${a} cm = ${f} cm². Grid mein gin ke dekho: ${f} chhote squares.`,
-      `First, the area of one face: ${a} cm × ${a} cm = ${f} cm². Count the grid: ${f} small squares.`,
-      `पहले एक फलक का क्षेत्रफल: ${a} cm × ${a} cm = ${f} cm²। जाली में गिनकर देखो: ${f} छोटे वर्ग।`,
+      `Ek face ka area: ${a} × ${a} = ${f} cm². Grid mein ${f} chhote squares.`,
+      `One face: ${a} × ${a} = ${f} cm². That is ${f} small squares on the grid.`,
+      `एक फलक का क्षेत्रफल: ${a} × ${a} = ${f} cm²। जाली में ${f} छोटे वर्ग।`,
     ),
     formula: `a \\times a = ${a} \\times ${a} = ${f}${CM2}`,
     why: tx(
@@ -46,9 +46,9 @@ function unfoldStep(a: number, total: number, faces: number, cue = 'unfold'): So
     cue,
     duration: 5,
     narration: tx(
-      `Ab cube ko kholo: ye uska net hai. Saaf dikhta hai ki ${faces} barabar squares hain, har ek ${squareArea(a)} cm².`,
-      `Now open the cube flat: this is its net. You can clearly see ${faces} equal squares of ${squareArea(a)} cm² each.`,
-      `अब घन को खोलो: यह उसका जाल है। साफ़ दिखता है कि ${faces} बराबर वर्ग हैं, हर एक ${squareArea(a)} cm²।`,
+      `Cube ko kholo: ye uska net hai. ${faces} barabar squares, har ek ${squareArea(a)} cm².`,
+      `Open the cube flat: this is its net. ${faces} equal squares of ${squareArea(a)} cm² each.`,
+      `घन को खोलो: यह उसका जाल है। ${faces} बराबर वर्ग, हर एक ${squareArea(a)} cm²।`,
     ),
     formula: `${faces} \\times ${squareArea(a)} = ${total}${CM2}`,
     why: tx(

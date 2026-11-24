@@ -24,9 +24,9 @@ function areaSteps(b: number, h: number) {
       'copy',
       5.5,
       [
-        'Triangle ki ek copy banao aur use AC ke beech se 180° ghumao. Dono milkar ek parallelogram ban gaye.',
-        'Make a copy of the triangle and turn it 180° about the middle of AC. Together they make a parallelogram.',
-        'त्रिभुज की एक प्रति बनाओ और उसे AC के बीच से 180° घुमाओ। दोनों मिलकर एक समांतर चतुर्भुज बन गए।',
+        'Triangle ki copy ko ghumao: dono milkar parallelogram ban gaye.',
+        'Turn a copy of the triangle: together they make a parallelogram.',
+        'त्रिभुज की प्रति को घुमाओ: दोनों मिलकर समांतर चतुर्भुज बन गए।',
       ],
       undefined,
       [

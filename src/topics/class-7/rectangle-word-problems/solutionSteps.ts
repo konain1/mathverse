@@ -58,9 +58,9 @@ export function solution(id: string, p: Params): SolutionScript {
       return {
         steps: [
           step('intro', 'intro', 4, [
-            `Photo ${l} × ${b} hai. Frame har taraf ${w} cm, to bahar ka size (${l} + 2×${w}) × (${b} + 2×${w}) = ${L} × ${B}.`,
-            `The photo is ${l} × ${b}. The frame adds ${w} cm on every side, so the outside is (${l} + 2×${w}) × (${b} + 2×${w}) = ${L} × ${B}.`,
-            `फ़ोटो ${l} × ${b} है। फ़्रेम हर तरफ़ ${w} cm, तो बाहरी आकार (${l} + 2×${w}) × (${b} + 2×${w}) = ${L} × ${B}।`,
+            `Photo ${l} × ${b}. Frame har taraf ${w} cm, to bahar ka size ${L} × ${B}.`,
+            `The photo is ${l} × ${b}. The frame adds ${w} cm on every side: outside ${L} × ${B}.`,
+            `फ़ोटो ${l} × ${b}। फ़्रेम हर तरफ़ ${w} cm, तो बाहरी आकार ${L} × ${B}।`,
           ], `${L} \\times ${B}`),
           step(
             'subtract',
@@ -78,15 +78,15 @@ export function solution(id: string, p: Params): SolutionScript {
             'frame',
             6,
             [
-              `Tareeka 2 (check): upar-neeche ki 2 patti ${L} × ${w}, aur side ki 2 patti ${w} × ${b}: ${2 * L * w} + ${2 * w * b} = ${F} cm². Dono same!`,
-              `Method 2 (check): 2 strips of ${L} × ${w} top and bottom, and 2 of ${w} × ${b} at the sides: ${2 * L * w} + ${2 * w * b} = ${F} cm². Both match!`,
-              `तरीका 2 (जाँच): ऊपर-नीचे की 2 पट्टियाँ ${L} × ${w}, और बगल की 2 पट्टियाँ ${w} × ${b}: ${2 * L * w} + ${2 * w * b} = ${F} cm²। दोनों बराबर!`,
+              `Check: 4 pattiyan jodo: ${2 * L * w} + ${2 * w * b} = ${F} cm². Wahi jawab!`,
+              `Check: add the 4 strips: ${2 * L * w} + ${2 * w * b} = ${F} cm². Same answer!`,
+              `जाँच: 4 पट्टियाँ जोड़ो: ${2 * L * w} + ${2 * w * b} = ${F} cm²। वही उत्तर!`,
             ],
             `2(${L} \\times ${w}) + 2(${w} \\times ${b}) = ${F}${CM2}`,
             [
-              'Patti tod ke jodne se kone do baar nahi gine jaate, isliye ye perimeter × chaudai se alag aata hai.',
-              "Splitting into strips doesn't count the corners twice, which is why it differs from perimeter × width.",
-              'पट्टियाँ तोड़कर जोड़ने से कोने दो बार नहीं गिने जाते, इसलिए यह परिमाप × चौड़ाई से अलग आता है।',
+              'Pattiyon mein kone ek hi baar gine jaate hain. Perimeter × chaudai mein do baar.',
+              'Strips count each corner once. Perimeter × width counts the corners twice.',
+              'पट्टियों में कोने एक ही बार गिने जाते हैं। परिमाप × चौड़ाई में दो बार।',
             ],
           ),
         ],
@@ -102,9 +102,9 @@ export function solution(id: string, p: Params): SolutionScript {
       return {
         steps: [
           step('intro', 'intro', 4, [
-            `Lawn ${L} × ${B} hai. Rasta andar har taraf ${w} cm, to bacha lawn (${L} − 2×${w}) × (${B} − 2×${w}) = ${l} × ${b}.`,
-            `The lawn is ${L} × ${B}. The path takes ${w} cm from every side, so the lawn left is (${L} − 2×${w}) × (${B} − 2×${w}) = ${l} × ${b}.`,
-            `लॉन ${L} × ${B} है। रास्ता अंदर हर तरफ़ ${w} cm, तो बचा लॉन (${L} − 2×${w}) × (${B} − 2×${w}) = ${l} × ${b}।`,
+            `Lawn ${L} × ${B}. Rasta har taraf ${w} cm, to bacha lawn ${l} × ${b}.`,
+            `The lawn is ${L} × ${B}. The path takes ${w} cm from each side: lawn left ${l} × ${b}.`,
+            `लॉन ${L} × ${B}। रास्ता हर तरफ़ ${w} cm, तो बचा लॉन ${l} × ${b}।`,
           ], `${l} \\times ${b} = ${l * b}${CM2}`),
           step(
             'subtract',

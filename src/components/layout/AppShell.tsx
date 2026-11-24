@@ -1,7 +1,7 @@
 import { MotionConfig } from 'framer-motion';
 import { Suspense, useEffect } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { APP_NAME } from '@/config/app';
+import { APP_BY, APP_NAME } from '@/config/app';
 import { LANG_META, useT } from '@/i18n';
 import { useSettings } from '@/state/settings';
 import { Logo } from '../Logo';
@@ -83,7 +83,7 @@ export function AppShell({ workspace = false }: { workspace?: boolean }) {
         {!workspace && (
         <footer className="border-t border-line/50">
           <div className="mx-auto flex max-w-page flex-col gap-2 px-4 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between sm:px-6">
-            <span className="font-bold text-ink">{APP_NAME}</span>
+            <span className="font-bold text-ink">{APP_NAME} {APP_BY}</span>
             <span>{t('landing.footerNote')}</span>
           </div>
         </footer>

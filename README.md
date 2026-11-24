@@ -1,4 +1,4 @@
-# Aakaar (working name: MathVerse 3D)
+# mathVerse by ko9
 
 Interactive 3D maths for CBSE/NCERT Classes 7–9. Students build each figure themselves, then watch an animated solution.
 Flow for every question: **Understand → Build → Solve → Try yourself**.

@@ -1,4 +1,5 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, BookOpen } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import type { ReactNode } from 'react';
 import { StageLayout } from '@/components/stage/StageLayout';
 import { GuideLayer } from '@/features/build/scene/GhostLayer';
@@ -89,6 +90,10 @@ export function UnderstandView({
             {t('play.understand.start')}
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </button>
+          <Link to={`/basics/${family}`} className="inline-flex min-h-[44px] items-center gap-2 text-sm font-semibold text-muted hover:text-ink">
+            <BookOpen className="h-4 w-4 text-accent" aria-hidden="true" />
+            {t('basics.open')}
+          </Link>
         </div>
       }
     />

@@ -25,9 +25,9 @@ export function solution(id: string, p: Params): SolutionScript {
           'rods',
           6,
           [
-            'Pehle ek misaal: jab do chhoti lakdiyan milkar bhi lambi lakdi jitni nahi hoti, to unke sire kabhi nahi milte.',
-            "First an example: when the two short sticks together aren't as long as the long one, their ends never meet.",
-            'पहले एक उदाहरण: जब दो छोटी लकड़ियाँ मिलकर भी लंबी लकड़ी जितनी नहीं होतीं, तो उनके सिरे कभी नहीं मिलते।',
+            'Do chhoti lakdiyan milkar lambi wali se chhoti hon, to unke sire kabhi nahi milte.',
+            'If the two short sticks together are shorter than the long one, their ends never meet.',
+            'दो छोटी लकड़ियाँ मिलकर लंबी वाली से छोटी हों, तो उनके सिरे कभी नहीं मिलते।',
           ],
           `a + b \\le c \\Rightarrow \\text{no triangle}`,
         ),
@@ -58,15 +58,15 @@ export function solution(id: string, p: Params): SolutionScript {
     'range',
     7,
     [
-      `${a} cm aur ${b} cm ki sides ke beech ka angle kholo. Teesri side ${b - a} cm se zyada aur ${a + b} cm se kam rehti hai.`,
-      `Open the angle between the ${a} cm and ${b} cm sides. The third side stays above ${b - a} cm and below ${a + b} cm.`,
-      `${a} cm और ${b} cm की भुजाओं के बीच का कोण खोलो। तीसरी भुजा ${b - a} cm से ज़्यादा और ${a + b} cm से कम रहती है।`,
+      `Angle kholte jao: teesri side ${b - a} cm se badi aur ${a + b} cm se chhoti rehti hai.`,
+      `Open the angle: the third side stays above ${b - a} cm and below ${a + b} cm.`,
+      `कोण खोलते जाओ: तीसरी भुजा ${b - a} cm से बड़ी और ${a + b} cm से छोटी रहती है।`,
     ],
     `${b} - ${a} < c < ${b} + ${a}`,
     [
-      'Angle bilkul band ho to teesri side = fark; bilkul khula (180°) to = jod. Dono hi baar triangle chapta hai.',
-      'With the angle fully closed the third side = the difference; fully open (180°) it = the sum. Both times the triangle is flat.',
-      'कोण पूरा बंद हो तो तीसरी भुजा = अंतर; पूरा खुला (180°) तो = योग। दोनों बार त्रिभुज चपटा है।',
+      'Angle bilkul band ya bilkul khula ho, to triangle chapta ho jaata hai.',
+      'With the angle fully closed or fully open, the triangle goes flat.',
+      'कोण पूरा बंद या पूरा खुला हो, तो त्रिभुज चपटा हो जाता है।',
     ],
   );
   const whole = step(

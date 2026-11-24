@@ -8,9 +8,9 @@ const remember = tx(
   'किसी भी त्रिभुज के तीनों कोणों का योग हमेशा 180° होता है।',
 );
 const why = (): [string, string, string] => [
-  'Teeno kone ek seedhi line par ek doosre se sat kar baith jaate hain, aur seedhi line ka angle 180° hota hai.',
-  'The three corners fit together side by side on a straight line, and a straight angle is 180°.',
-  'तीनों कोने एक सीधी रेखा पर एक-दूसरे से सटकर बैठ जाते हैं, और सीधी रेखा का कोण 180° होता है।',
+  'Teeno kone milkar seedhi line banate hain, aur seedhi line = 180°.',
+  'The three corners together make a straight line, and a straight line = 180°.',
+  'तीनों कोने मिलकर सीधी रेखा बनाते हैं, और सीधी रेखा = 180°।',
 ];
 
 /** Angles at A, B, C for each question (used by the scene too). */

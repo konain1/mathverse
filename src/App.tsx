@@ -7,6 +7,7 @@ const LandingPage = lazy(() => import('@/pages/LandingPage'));
 const TopicPage = lazy(() => import('@/pages/TopicPage'));
 const SandboxPage = lazy(() => import('@/pages/SandboxPage'));
 const TopicPlayPage = lazy(() => import('@/pages/TopicPlayPage'));
+const BasicsPage = lazy(() => import('@/pages/BasicsPage'));
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'));
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
       <Routes>
         <Route element={<AppShell workspace />}>
           <Route path="/build" element={<SandboxPage />} />
+          <Route path="/basics/:family/:conceptId?" element={<BasicsPage />} />
           <Route path="/topic/:topicId/q/:questionId" element={<TopicPlayPage />} />
         </Route>
         <Route element={<AppShell />}>

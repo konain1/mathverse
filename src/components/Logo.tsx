@@ -1,4 +1,4 @@
-import { APP_NAME } from '@/config/app';
+import { APP_BY, APP_NAME } from '@/config/app';
 
 export function Logo() {
   return (
@@ -11,7 +11,10 @@ export function Logo() {
         </g>
         <circle cx="16" cy="16" r="1.9" fill="rgb(var(--triangle))" />
       </svg>
-      <span className="text-lg font-extrabold tracking-tight">{APP_NAME}</span>
+      <span className="flex items-baseline gap-1.5">
+        <span className="text-lg font-extrabold tracking-tight">{APP_NAME}</span>
+        <span className="text-xs font-semibold text-muted">{APP_BY}</span>
+      </span>
     </span>
   );
 }

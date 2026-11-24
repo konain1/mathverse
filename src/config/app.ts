@@ -1,6 +1,7 @@
 /**
  * Product name lives in exactly one place so it can be changed later.
- * "Aakaar" (आकार) = shape / form.
  */
-export const APP_NAME = 'Aakaar';
+export const APP_NAME = 'mathVerse';
+export const APP_BY = 'by ko9';
+/** Kept as "aakaar" so progress and settings already saved on devices aren't lost. */
 export const STORAGE_PREFIX = 'aakaar';

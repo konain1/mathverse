@@ -24,15 +24,15 @@ function halfSquare(d: number) {
     'diag-square',
     6,
     [
-      `Diagonals ke siron se ek bada square banao: uski side ${d} cm, area ${d * d} cm². Bahar ke 4 triangles andar ke 4 triangles jaise hain, to hamara square uska aadha: ${d * d} ÷ 2 = ${A} cm².`,
-      `Build a big square through the ends of the diagonals: side ${d} cm, area ${d * d} cm². The 4 outer triangles match the 4 inner ones, so our square is half: ${d * d} ÷ 2 = ${A} cm².`,
-      `विकर्णों के सिरों से एक बड़ा वर्ग बनाओ: भुजा ${d} cm, क्षेत्रफल ${d * d} cm²। बाहर के 4 त्रिभुज अंदर के 4 त्रिभुजों जैसे हैं, तो हमारा वर्ग उसका आधा: ${d * d} ÷ 2 = ${A} cm²।`,
+      `Diagonals ke siron se bada square banao: area ${d * d} cm². Hamara square uska aadha: ${A} cm².`,
+      `Draw a big square through the diagonal ends: area ${d * d} cm². Ours is half: ${A} cm².`,
+      `विकर्णों के सिरों से बड़ा वर्ग बनाओ: क्षेत्रफल ${d * d} cm²। हमारा वर्ग उसका आधा: ${A} cm²।`,
     ],
     `A = \\dfrac{d^2}{2} = \\dfrac{${d}^2}{2} = ${A}${CM2}`,
     [
-      'Square ek rhombus bhi hai, aur rhombus ka area = ½ × d₁ × d₂. Square mein d₁ = d₂ = d, isliye d² ÷ 2.',
-      'A square is also a rhombus, and a rhombus has area ½ × d₁ × d₂. In a square d₁ = d₂ = d, so d² ÷ 2.',
-      'वर्ग एक समचतुर्भुज भी है, और समचतुर्भुज का क्षेत्रफल = ½ × d₁ × d₂। वर्ग में d₁ = d₂ = d, इसलिए d² ÷ 2।',
+      'Bahar ke 4 triangles andar ke 4 jaise hain. Isliye andar wala square aadha hai.',
+      'The 4 outside triangles match the 4 inside ones. So the inside square is half.',
+      'बाहर के 4 त्रिभुज अंदर के 4 जैसे हैं। इसलिए अंदर वाला वर्ग आधा है।',
     ],
   );
 }

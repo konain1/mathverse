@@ -38,9 +38,9 @@ export function solution(id: string, p: Params): SolutionScript {
     ],
     `A = \\sqrt{${s}(${s - a})(${s - b})(${s - c})} = \\sqrt{${prod}} = ${area}${CM2}`,
     [
-      'Heron ka formula sirf teen sides se area deta hai, jab height naapna mushkil ho (jaise khet ya plot mein).',
-      'Heron’s formula gives the area from just the three sides, handy when the height is hard to measure (like in a field).',
-      'हीरोन का सूत्र सिर्फ़ तीन भुजाओं से क्षेत्रफल देता है, जब ऊँचाई नापना मुश्किल हो (जैसे खेत में)।',
+      'Height na pata ho, tab bhi sirf teen sides se area mil jaata hai.',
+      'Even without the height, the three sides are enough to get the area.',
+      'ऊँचाई पता न हो, तब भी सिर्फ़ तीन भुजाओं से क्षेत्रफल मिल जाता है।',
     ],
   );
   const mistake = tx('Last mein square root lena bhool jaana, ya s ki jagah poora perimeter le lena.', 'Forgetting the final square root, or using the whole perimeter instead of s.', 'अंत में वर्गमूल लेना भूल जाना, या s की जगह पूरा परिमाप ले लेना।');
@@ -59,9 +59,9 @@ export function solution(id: string, p: Params): SolutionScript {
             'altitude',
             5,
             [
-              `Height on a: h = 2 × ${area} ÷ ${a} = ${fmt(h)} cm. Altitude naap ke dekho: wahi aata hai! Aur ½ × ${a} × ${fmt(h)} = ${area}. ✓`,
-              `Height on a: h = 2 × ${area} ÷ ${a} = ${fmt(h)} cm. Measure the altitude: it matches! And ½ × ${a} × ${fmt(h)} = ${area}. ✓`,
-              `a पर ऊँचाई: h = 2 × ${area} ÷ ${a} = ${fmt(h)} cm। शीर्षलंब नापकर देखो: वही आता है! और ½ × ${a} × ${fmt(h)} = ${area}। ✓`,
+              `Base ${a} par height: h = 2 × ${area} ÷ ${a} = ${fmt(h)} cm. Naap ke dekho: wahi hai! ✓`,
+              `Height on base ${a}: h = 2 × ${area} ÷ ${a} = ${fmt(h)} cm. Measure it: it matches! ✓`,
+              `आधार ${a} पर ऊँचाई: h = 2 × ${area} ÷ ${a} = ${fmt(h)} cm। नापकर देखो: वही है! ✓`,
             ],
             `h = \\dfrac{2 \\times ${area}}{${a}} = ${fmt(h)}${CM}`,
           ),
