@@ -1,0 +1,54 @@
+/*
+ * Design tokens. Every colour is an "R G B" triplet so Tailwind can apply alpha.
+ * Shape accents are fixed meaning across the app: triangle = amber, square = teal,
+ * rectangle = rose, cube/cuboid = violet. Colour is never the only signal — every
+ * shape also carries its icon/name, and right/wrong always carry ✓ / ✕ icons.
+ */
+:root,
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: 5 9 26;            /* deep space */
+  --bg-raised: 11 18 46;   /* blueprint navy */
+  --surface: 20 31 72;     /* glass tint */
+  --line: 42 58 112;       /* grid + hairlines */
+  --ink: 230 236 255;
+  --muted: 150 162 205;
+  --faint: 92 106 155;
+  --shadow: 0 0 0;
+
+  --triangle: 255 184 76;  /* amber */
+  --square: 45 212 191;    /* teal */
+  --rectangle: 251 113 145;/* rose */
+  --cube: 167 139 250;     /* violet */
+  --ok: 52 211 153;
+  --bad: 255 107 107;
+
+  --accent: var(--cube);
+  --grid-alpha: 0.16;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: 242 246 255;       /* blueprint paper (cool, not cream) */
+  --bg-raised: 255 255 255;
+  --surface: 255 255 255;
+  --line: 199 210 238;
+  --ink: 12 22 56;
+  --muted: 72 86 132;
+  --faint: 130 142 182;
+  --shadow: 30 44 100;
+
+  --triangle: 184 106 0;
+  --square: 13 140 125;
+  --rectangle: 208 52 96;
+  --cube: 104 72 222;
+  --ok: 5 150 105;
+  --bad: 214 51 51;
+
+  --grid-alpha: 0.55;
+}
+
+[data-accent='triangle'] { --accent: var(--triangle); }
+[data-accent='square'] { --accent: var(--square); }
+[data-accent='rectangle'] { --accent: var(--rectangle); }
+[data-accent='cube'] { --accent: var(--cube); }
