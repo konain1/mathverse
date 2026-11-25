@@ -1,0 +1,22 @@
+{
+  "name": "mathverse-server",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "mathVerse backend: sign up, log in, sessions and saved progress",
+  "engines": { "node": ">=22.6" },
+  "scripts": {
+    "dev": "node --watch --disable-warning=ExperimentalWarning src/index.ts",
+    "start": "node --disable-warning=ExperimentalWarning src/index.ts",
+    "test": "node --disable-warning=ExperimentalWarning --test src/*.test.ts",
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.9.0",
+    "typescript": "~5.6.3"
+  }
+}

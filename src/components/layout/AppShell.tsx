@@ -3,8 +3,10 @@ import { Suspense, useEffect } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { APP_BY, APP_NAME } from '@/config/app';
 import { LANG_META, useT } from '@/i18n';
+import { useAuthAndSync } from '@/state/auth';
 import { useSettings } from '@/state/settings';
 import { Logo } from '../Logo';
+import { AccountButton } from './AccountButton';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { ThemeToggle } from './ThemeToggle';
 
@@ -54,6 +56,7 @@ export function AppShell({ workspace = false }: { workspace?: boolean }) {
   const t = useT();
   useDocumentSync();
   useScrollTopOnNavigate();
+  useAuthAndSync();
 
   return (
     <MotionConfig reducedMotion="user">
@@ -72,6 +75,7 @@ export function AppShell({ workspace = false }: { workspace?: boolean }) {
             <div className="flex items-center gap-2">
               <LanguageSwitcher />
               <ThemeToggle />
+              <AccountButton />
             </div>
           </div>
         </header>
