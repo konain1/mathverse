@@ -16,11 +16,7 @@ interface ProgressState {
   recordStars: (topicId: string, questionId: string, stars: number) => void;
   markBuilt: (topicId: string, questionId: string) => void;
   markWatched: (topicId: string, questionId: string) => void;
-  /** Replace with progress loaded from the student's account (already merged with this device's). */
-  replaceAll: (p: SavedProgress) => void;
 }
-
-export type SavedProgress = Pick<ProgressState, 'stars' | 'built' | 'watched'>;
 
 const set2 = <T,>(m: Record<string, Record<string, T>>, a: string, b: string, v: T) => ({ ...m, [a]: { ...m[a], [b]: v } });
 
@@ -34,7 +30,6 @@ export const useProgress = create<ProgressState>()(
         set((s) => ((s.stars[t]?.[q] ?? 0) >= n ? s : { stars: set2(s.stars, t, q, n) })),
       markBuilt: (t, q) => set((s) => (s.built[t]?.[q] ? s : { built: set2(s.built, t, q, true as const) })),
       markWatched: (t, q) => set((s) => (s.watched[t]?.[q] ? s : { watched: set2(s.watched, t, q, true as const) })),
-      replaceAll: (p) => set({ stars: p.stars, built: p.built, watched: p.watched }),
     }),
     { name: storageKey('progress'), storage: appStorage, version: 1 },
   ),

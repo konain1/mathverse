@@ -8,9 +8,6 @@ export default defineConfig({
   resolve: {
     alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
   },
-  // the backend (server/) runs on :4000; the app calls it as /api/… so cookies stay same-origin
-  server: { proxy: { '/api': 'http://localhost:4000' } },
-  preview: { proxy: { '/api': 'http://localhost:4000' } },
   build: {
     target: 'es2020',
     chunkSizeWarningLimit: 1200,
